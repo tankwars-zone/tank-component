@@ -181,6 +181,41 @@ $spacing-ratio: 1.7;
   max-width: 100%;
 }
 
+@mixin bigDesktop {
+  @media (max-width: 1600px) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1440px) {
+      @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1366px) {
+      @content;
+  }
+}
+
+@mixin iPadPro {
+  @media (max-width: 1024px) {
+      @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+      @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 600px) {
+      @content;
+  }
+}
 /* GLOBAL FUNCTIONS
 --------------------------------------------- */
 
