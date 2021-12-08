@@ -13,9 +13,6 @@ export default {
     type: {
       type: String,
       default: "h2",
-      validator: value => {
-        return value.match(/(h1|h1|h3|h4|h5|h6)/)
-      },
     },
   },
 }
