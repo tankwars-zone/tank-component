@@ -4,6 +4,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "SubLine",
+  status: "prototype",
+  release: "3.5.0",
+}
+</script>
+
 <style lang="scss" scoped>
 .subline {
   font-size: 20px;

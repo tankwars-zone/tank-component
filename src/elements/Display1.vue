@@ -1,8 +1,25 @@
 <template>
-  <h2 class="display1">
+  <component :is="type" class="display1">
     <slot></slot>
-  </h2>
+  </component>
 </template>
+
+<script>
+export default {
+  name: "Display1",
+  status: "prototype",
+  release: "3.5.0",
+  props: {
+    type: {
+      type: String,
+      default: "h2",
+      validator: value => {
+        return value.match(/(h1|h1|h3|h4|h5|h6)/)
+      },
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .display1 {

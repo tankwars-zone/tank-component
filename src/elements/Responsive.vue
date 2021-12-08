@@ -9,6 +9,14 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Responsive",
+  status: "prototype",
+  release: "3.5.0",
+}
+</script>
+
 <style scoped lang="scss">
 .desktop {
   display: block;

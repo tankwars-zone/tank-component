@@ -4,6 +4,20 @@
   </h3>
 </template>
 
+<script>
+export default {
+  name: "Overline",
+  status: "prototype",
+  release: "3.5.0",
+  props: {
+    type: {
+      type: String,
+      default: "h3",
+    },
+  },
+}
+</script>
+
 <style lang="scss" scoped>
 .overline {
   font-family: var(--heading-font);

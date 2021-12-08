@@ -183,39 +183,40 @@ $spacing-ratio: 1.7;
 
 @mixin bigDesktop {
   @media (max-width: 1600px) {
-      @content;
+    @content;
   }
 }
 
 @mixin desktop {
   @media (max-width: 1440px) {
-      @content;
+    @content;
   }
 }
 
 @mixin laptop {
   @media (max-width: 1366px) {
-      @content;
+    @content;
   }
 }
 
 @mixin iPadPro {
   @media (max-width: 1024px) {
-      @content;
+    @content;
   }
 }
 
 @mixin tablet {
   @media (max-width: 768px) {
-      @content;
+    @content;
   }
 }
 
 @mixin mobile {
   @media (max-width: 600px) {
-      @content;
+    @content;
   }
 }
+
 /* GLOBAL FUNCTIONS
 --------------------------------------------- */
 
