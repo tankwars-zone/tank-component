@@ -1,3 +1,4 @@
+/** RADIOS **/
 .custom-control {
   position: relative;
   z-index: 1;
@@ -65,8 +66,45 @@
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3E%3C/svg%3E");
 }
 
+/** BUTTONS **/
 .btn {
   border-radius: 6px;
+}
+
+button.close {
+  border: 0;
+  background: transparent;
+  font-size: 1.3rem;
+}
+
+.btn-secondary {
+  color: #fff;
+  min-width: 120px;
+  font-family: var(--heading-font);
+  box-shadow: 0 3px 0 -1px #bb3b3a;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    color: #fff;
+    box-shadow: 0 3px 0 -1px #bb3b3a;
+  }
+}
+
+.btn-danger {
+  color: #fff;
+  min-width: 120px;
+  font-family: var(--heading-font);
+  box-shadow: 0 3px 0 -1px #bb3b3a;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    color: #fff;
+    box-shadow: 0 3px 0 -1px #12489a;
+  }
 }
 
 .btn-primary {
@@ -81,5 +119,85 @@
   &:active:focus {
     color: #fff;
     box-shadow: 0 3px 0 -1px #12489a;
+  }
+}
+
+/** MODAL **/
+.modal-content {
+  border: 1px solid #bcbfc5;
+  background: #f2f4f7;
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 120px;
+    height: 12px;
+    background: linear-gradient(180deg, #dff 0%, #bdf3ff 100%);
+    border: 1px solid #aec2e0;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px #fff;
+    border-radius: 0 0 8px 8px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    height: 12px;
+    background: linear-gradient(180deg, #dff 0%, #bdf3ff 100%);
+    border: 1px solid #aec2e0;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px #fff;
+    border-radius: 0 0 8px 8px;
+    transform: rotate(-180deg);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.modal-header {
+  border-bottom: 0;
+  justify-content: center;
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.modal-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: var(--heading-font);
+}
+
+.modal-footer {
+  border-top: 0;
+  justify-content: center;
+}
+
+.modal-body {
+  text-align: center;
+  padding-top: 0;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 360px;
   }
 }
