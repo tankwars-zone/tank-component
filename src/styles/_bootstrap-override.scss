@@ -77,18 +77,26 @@ button.close {
   font-size: 1.3rem;
 }
 
+.btn-outline-secondary {
+  color: #484d5b;
+}
+
+.btn-check:focus + .btn-outline-secondary,
+.btn-outline-secondary:focus {
+  box-shadow: none;
+}
+
 .btn-secondary {
   color: #fff;
-  min-width: 120px;
   font-family: var(--heading-font);
-  box-shadow: 0 3px 0 -1px #bb3b3a;
+  box-shadow: 0 3px 0 -1px #8b949b;
 
   &:hover,
   &:focus,
   &:active,
   &:active:focus {
     color: #fff;
-    box-shadow: 0 3px 0 -1px #bb3b3a;
+    box-shadow: 0 3px 0 -1px #8b949b;
   }
 }
 
@@ -200,4 +208,15 @@ button.close {
   .modal-dialog {
     max-width: 360px;
   }
+}
+
+/** DROPDOWN **/
+.dropdown-menu {
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-divider {
+  border-color: #bcbfc5;
 }
