@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="display2">
+  <component :is="type" class="display2" :class="className">
     <slot></slot>
   </component>
 </template>
@@ -13,6 +13,10 @@ export default {
     type: {
       type: String,
       default: "h2",
+    },
+    className: {
+      type: String,
+      default: "",
     },
   },
 }
