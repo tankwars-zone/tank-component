@@ -220,3 +220,46 @@ button.close {
 .dropdown-divider {
   border-color: #bcbfc5;
 }
+
+.tabs {
+  .card-header {
+    padding: 0;
+    background-color: transparent;
+    border-bottom: 0;
+  }
+
+  .card-body {
+    padding: 6px;
+  }
+}
+
+.nav-pills .nav-link {
+  text-transform: uppercase;
+  color: #8d95ae;
+  font-family: var(--heading-font);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: transparent;
+  color: #171922;
+}
+
+.page-link {
+  margin-right: 8px;
+  margin-left: 8px;
+  color: #8d95ae;
+}
+
+.page-link:focus {
+  box-shadow: none;
+  color: var(--primary);
+}
+
+.page-item.disabled .page-link {
+  border: 1px solid #bcbfc5;
+}
+
+.b-pagination-pills .page-item .page-link {
+  border-radius: 8px !important;
+}
