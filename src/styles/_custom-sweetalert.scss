@@ -1,0 +1,69 @@
+$padding: 60px;
+
+@mixin button($color) {
+  color: #fff;
+  font-family: var(--heading-font);
+  box-shadow: 0 3px 0 -1px $color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    color: #fff;
+    box-shadow: 0 3px 0 -1px $color;
+  }
+}
+
+.swal2-popup {
+  background: #f2f4f7;
+  border: 1px solid #bcbfc5;
+  border-radius: 8px;
+  padding-bottom: $padding;
+
+  &::after,
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(180deg, #dff 0%, #96fbfb 100%);
+    border: 1px solid #aec2e0;
+    box-shadow: 1px 1px 2px #fff;
+    border-radius: 0 0 8px 8px;
+    width: 120px;
+    height: 12px;
+  }
+
+  &::after {
+    top: -1px;
+  }
+
+  &::before {
+    bottom: -1px;
+    border-radius: 0 0 8px 8px;
+    transform: rotate(-180deg);
+  }
+}
+
+.swal2-title {
+  padding-top: $padding;
+}
+
+.swal2-styled.swal2-confirm {
+  min-width: 120px;
+
+  @include button(#12489a);
+}
+
+.swal2-styled.swal2-cancel {
+  @include button(#8b949b);
+}
+
+.swal2-styled.swal2-deny {
+  min-width: 120px;
+
+  @include button(#bb3b3a);
+}

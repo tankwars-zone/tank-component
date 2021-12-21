@@ -1,3 +1,17 @@
+@mixin button($color) {
+  color: #fff;
+  font-family: var(--heading-font);
+  box-shadow: 0 3px 0 -1px $color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    color: #fff;
+    box-shadow: 0 3px 0 -1px $color;
+  }
+}
+
 /** RADIOS **/
 .custom-control {
   position: relative;
@@ -87,47 +101,19 @@ button.close {
 }
 
 .btn-secondary {
-  color: #fff;
-  font-family: var(--heading-font);
-  box-shadow: 0 3px 0 -1px #8b949b;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &:active:focus {
-    color: #fff;
-    box-shadow: 0 3px 0 -1px #8b949b;
-  }
+  @include button(#8b949b);
 }
 
 .btn-danger {
-  color: #fff;
   min-width: 120px;
-  font-family: var(--heading-font);
-  box-shadow: 0 3px 0 -1px #bb3b3a;
 
-  &:hover,
-  &:focus,
-  &:active,
-  &:active:focus {
-    color: #fff;
-    box-shadow: 0 3px 0 -1px #12489a;
-  }
+  @include button(#bb3b3a);
 }
 
 .btn-primary {
-  color: #fff;
   min-width: 120px;
-  font-family: var(--heading-font);
-  box-shadow: 0 3px 0 -1px #12489a;
 
-  &:hover,
-  &:focus,
-  &:active,
-  &:active:focus {
-    color: #fff;
-    box-shadow: 0 3px 0 -1px #12489a;
-  }
+  @include button(#12489a);
 }
 
 /** MODAL **/
