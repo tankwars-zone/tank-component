@@ -12,6 +12,22 @@
   }
 }
 
+@mixin button-outline($color) {
+  box-shadow: none;
+  color: $color;
+  border-color: $color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    box-shadow: none;
+    background: #fff;
+    background-color: $color;
+    color: #fff;
+  }
+}
+
 /** RADIOS **/
 .custom-control {
   position: relative;
@@ -248,4 +264,8 @@ button.close {
 
 .b-pagination-pills .page-item .page-link {
   border-radius: 8px !important;
+}
+
+.btn-outline-primary {
+  @include button-outline(#277eff);
 }
