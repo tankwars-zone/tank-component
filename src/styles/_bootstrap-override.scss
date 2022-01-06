@@ -1,14 +1,22 @@
 @mixin button($color) {
   color: #fff;
   font-family: var(--heading-font);
-  box-shadow: 0 3px 0 -1px $color;
+  box-shadow: 0 4px 0 -1px $color;
 
   &:hover,
   &:focus,
   &:active,
   &:active:focus {
     color: #fff;
-    box-shadow: 0 3px 0 -1px $color;
+    box-shadow: 0 4px 0 -1px $color;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: #8d95ae;
+    border-color: #8d95ae;
+    box-shadow: 0 4px 0 -1px #484d5b;
+    color: #fff;
   }
 }
 
