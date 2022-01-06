@@ -1,5 +1,5 @@
 <template>
-  <component :is="type" class="title2" :class="className">
+  <component :is="type" class="title2" :class="[className, `title2--${variant}`]">
     <slot></slot>
   </component>
 </template>
@@ -18,6 +18,11 @@ export default {
       type: String,
       default: "",
     },
+    variant: {
+      type: String,
+      default: "normal",
+      validator: val => ["light", "normal", "primary"].includes(val),
+    },
   },
 }
 </script>
@@ -31,6 +36,14 @@ export default {
   text-transform: uppercase;
   color: var(--primary-text);
   margin-bottom: 0;
+
+  &--light {
+    color: #fff;
+  }
+
+  &--primary {
+    color: var(--color-primary);
+  }
 
   @include tablet {
     font-size: 24px;
