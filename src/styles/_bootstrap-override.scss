@@ -1,22 +1,132 @@
+$_space: 16px;
+$_sm_space: 9px;
+$_sm_size: 9px auto;
+
 @mixin button($color) {
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
   color: #fff;
+  text-align: center;
   font-family: var(--heading-font);
-  box-shadow: 0 4px 0 -1px $color;
+  border-radius: 0;
+  position: relative;
+  line-height: 32px;
+  font-size: 36px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  background-color: transparent;
+  background-image: url("/v3/buttons.png");
+  background-repeat: repeat-x;
+  background-position: left -182px;
+  padding: 27px 20px;
+  margin-left: $_space;
+  margin-right: $_space;
+  transition: none;
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $_space;
+  }
+
+  &::before {
+    background: url("/v3/buttons.png") no-repeat left top;
+    left: -$_space;
+  }
+
+  &::after {
+    background: url("/v3/buttons.png") no-repeat right -91px;
+    right: -$_space;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: #526bab;
+    background-image: none;
+    background-color: #394079;
+
+    &::after {
+      background-image: url("/v3/button-right-disabled.png");
+      background-position: right 0;
+    }
+
+    &::before {
+      background-image: url("/v3/button-left-disabled.png");
+    }
+  }
 
   &:hover,
   &:focus,
   &:active,
   &:active:focus {
-    color: #fff;
-    box-shadow: 0 4px 0 -1px $color;
+    color: #0d123a;
+    text-shadow: none;
+    background-image: none;
+    background-color: #f4bf01;
+
+    &::before {
+      background-position: left -273px;
+    }
+
+    &::after {
+      background-position: right -364px;
+    }
   }
 
-  &:disabled,
-  &.disabled {
-    background-color: #8d95ae;
-    border-color: #8d95ae;
-    box-shadow: 0 4px 0 -1px #484d5b;
-    color: #fff;
+  &.btn-sm {
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 26px;
+    background-size: $_sm_size;
+    background-position: left -96px;
+    margin-left: $_sm_space;
+    margin-right: $_sm_space;
+
+    &::after,
+    &::before {
+      width: $_sm_space;
+    }
+
+    &::before {
+      left: -8px;
+      background-size: 9.5px auto;
+    }
+
+    &::after {
+      background-position: right -47px;
+      background-size: $_sm_size;
+      right: -$_sm_space;
+    }
+
+    &:disabled,
+    &.disabled {
+      &::after {
+        background-position: right top;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      &::before {
+        background-position: left -145px;
+      }
+
+      &::after {
+        background-position: right -192px;
+      }
+    }
   }
 }
 
@@ -119,8 +229,8 @@ button.close {
   color: #484d5b;
 }
 
-.btn-check:focus + .btn-outline-secondary,
-.btn-outline-secondary:focus {
+.btn-outline-secondary:focus,
+.btn-check:focus + .btn-outline-secondary {
   box-shadow: none;
 }
 
