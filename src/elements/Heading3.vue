@@ -13,7 +13,6 @@ export default {
     variant: {
       type: String,
       default: "normal",
-      validator: val => ["light", "normal", "primary"].includes(val),
     },
   },
 }
