@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-12 col-md-9">
               <div class="row">
-                <div v-for="item in data" :key="item.title" class="col-12 col-md-6">
+                <div v-for="item in addresses" :key="item.title" class="col-12 col-md-6">
                   <div class="title">
                     {{ item.title }}
                   </div>
@@ -39,7 +39,7 @@
         <template slot="ipad">
           <div>
             <div v-show="isShow">
-              <div v-for="item in data" :key="item.title" class="mb-4">
+              <div v-for="item in addresses" :key="item.title" class="mb-4">
                 <div class="title">
                   {{ item.title }}
                 </div>
@@ -88,16 +88,16 @@ export default {
     ExternalLink,
   },
   props: {
-    data: {
+    addresses: {
       type: Array,
       default: () => [
         {
           title: "WBOND Contract Address",
-          address: "0x3c714aa0ee19aa7d7f30a63f712080b1393fdb00",
+          address: "",
         },
         {
           title: "TGOLD Contract Address",
-          address: "0x3c714aa0ee19aa7d7f30a63f712080b1393fdb00",
+          address: "",
         },
       ],
     },
