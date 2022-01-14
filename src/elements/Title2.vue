@@ -29,10 +29,9 @@ export default {
 
 <style lang="scss" scoped>
 .title2 {
-  font-family: var(--heading-font);
-  font-weight: normal;
+  font-weight: bold;
   font-size: 18px;
-  line-height: 43px;
+  line-height: 26px;
   text-transform: uppercase;
   color: var(--primary-text);
   margin-bottom: 0;
