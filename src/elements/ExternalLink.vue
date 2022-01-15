@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "External",
+  name: "ExternalLink",
   props: {
     href: {
       type: String,
