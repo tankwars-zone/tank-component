@@ -347,3 +347,7 @@ button.close {
 .form-control.is-valid:focus {
   box-shadow: none;
 }
+
+.text-primary {
+  color: var(--primary) !important;
+}
