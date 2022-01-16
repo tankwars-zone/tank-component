@@ -1,18 +1,17 @@
 <template>
-  <h3 class="overline">
-    <slot></slot>
-  </h3>
+  <div class="overline" :class="`overline--${variant}`">
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
   name: "Overline",
-  status: "prototype",
-  release: "3.5.0",
   props: {
-    type: {
+    variant: {
       type: String,
-      default: "h3",
+      default: "normal",
+      // validator: (val) => ['light', 'normal', 'primary'].includes(val),
     },
   },
 }
@@ -20,24 +19,24 @@ export default {
 
 <style lang="scss" scoped>
 .overline {
-  font-family: var(--heading-font);
-  font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 31px;
   text-transform: uppercase;
-  color: var(--primary);
-  margin-top: 0;
-  margin-bottom: 4px;
+  color: var(--text-primary);
 
-  @include iPadPro {
-    font-size: 18px;
-    line-height: 22px;
+  &--light {
+    color: #fff;
+  }
+
+  &--primary {
+    color: var(--primary);
   }
 
   @include mobile {
-    font-size: 18px;
-    line-height: 22px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 </style>

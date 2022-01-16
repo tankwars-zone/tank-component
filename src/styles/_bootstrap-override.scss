@@ -225,15 +225,6 @@ button.close {
   font-size: 1.3rem;
 }
 
-.btn-outline-secondary {
-  color: #484d5b;
-}
-
-.btn-outline-secondary:focus,
-.btn-check:focus + .btn-outline-secondary {
-  box-shadow: none;
-}
-
 .btn-secondary {
   @include button(#8b949b);
 }
