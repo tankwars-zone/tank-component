@@ -246,10 +246,21 @@ button.close {
   border: 0;
   border-radius: 8px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  background: var(--body-bg);
 }
 
 .dropdown-divider {
   border-color: #bcbfc5;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #fff;
+  background-color: #161b49;
 }
 
 .tabs {
