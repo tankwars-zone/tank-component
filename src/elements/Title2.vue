@@ -32,7 +32,6 @@ export default {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  text-transform: uppercase;
   color: var(--primary-text);
   margin-bottom: 0;
 
