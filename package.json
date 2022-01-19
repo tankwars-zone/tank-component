@@ -7,8 +7,8 @@
   "files": [
     "dist/system"
   ],
-  "homepage": "https://vueds.com",
-  "private": true,
+  "homepage": "https://tankwars.zone/",
+  "private": false,
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --config ./build/webpack.dev.conf.js",
